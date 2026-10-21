@@ -8,6 +8,7 @@ A responsive personal-brand website for Stephanus Kgaugelo Hermanus, built with 
 - `src/styles.css` — responsive visual system and page styling
 - `src/privacy.tsx` and `privacy.html` — privacy information page
 - `public/favicon.svg` — SKH text monogram
+- `public/images/` — supplied personal, sports and community gallery photographs
 - `render.yaml` — Render Static Site build and publishing configuration
 
 ## Requirements
@@ -69,6 +70,6 @@ npm run dev
 
 ## Content and images
 
-Profile and contact details are configured together near the top of `src/App.tsx`. The current rugby, community and workshop images are illustrative stock photography loaded from Unsplash; they are not presented as photographs of SK Hermanus, his teams or completed company projects. Replace them with approved, optimized photographs when available.
+Profile and contact details are configured together near the top of `src/App.tsx`. The gallery and About section use the supplied personal, community and sports photographs stored in `public/images/`. Image loading is deferred for gallery cards. Phone lock-screen screenshots and a duplicate image were not included, to avoid showing status-bar details or repeating the same photo. The hero and business-workshop background images are illustrative stock photos, not photographs of SK Hermanus, his teams or completed company projects.
 
 No WhatsApp link is shown because a preferred WhatsApp number has not been confirmed. No social accounts, testimonials, awards, completed qualifications or business projects have been invented.

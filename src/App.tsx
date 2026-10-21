@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 const profile = {
   name: "Stephanus Kgaugelo Hermanus",
@@ -47,6 +47,54 @@ const milestones = [
   ["Community leadership", "Director of the Community Sports Legacy NPC."],
   ["Entrepreneurship", "Managing Director of Radikwebo SKH Industries and Projects."],
   ["Looking ahead", "Developing a vision for a rugby academy and sports agency."],
+];
+
+const galleryPhotos = [
+  {
+    src: "/images/speaking-at-the-podium.jpg",
+    alt: "Stephanus Hermanus speaking at a podium",
+    caption: "Speaking & community leadership",
+  },
+  {
+    src: "/images/club-recognition.jpg",
+    alt: "Club members sharing certificates at a recognition event",
+    caption: "Club recognition",
+  },
+  {
+    src: "/images/graduation-portrait-01.jpg",
+    alt: "Stephanus Hermanus in graduation attire",
+    caption: "An education milestone",
+  },
+  {
+    src: "/images/community-sports-field.jpg",
+    alt: "Stephanus Hermanus standing on a sports field",
+    caption: "On the field",
+  },
+  {
+    src: "/images/personal-portrait.jpg",
+    alt: "A formal portrait of Stephanus Hermanus",
+    caption: "A personal portrait",
+  },
+  {
+    src: "/images/graduation-portrait-02.jpg",
+    alt: "Stephanus Hermanus wearing graduation attire",
+    caption: "Celebrating education",
+  },
+  {
+    src: "/images/community-health-event.jpg",
+    alt: "Stephanus Hermanus at a Global Handwashing Day 2024 event",
+    caption: "Global Handwashing Day 2024",
+  },
+  {
+    src: "/images/journey-and-rugby-collage.jpg",
+    alt: "A collage of personal, community, and rugby moments",
+    caption: "Moments from the journey",
+  },
+  {
+    src: "/images/community-day-portrait.jpg",
+    alt: "Stephanus Hermanus in a jacket and colourful scarf",
+    caption: "A community moment",
+  },
 ];
 
 type EnquiryFormProps = {
@@ -123,6 +171,81 @@ function EnquiryForm({ recipient, title, description, types, id }: EnquiryFormPr
       <p className="form-disclaimer">This form opens your email application. It does not send or store your details on this website.</p>
       <p className="form-notice" role="status" aria-live="polite">{notice}</p>
     </form>
+  );
+}
+
+function PhotoGallery() {
+  const [selectedPhoto, setSelectedPhoto] = useState<(typeof galleryPhotos)[number] | null>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    if (selectedPhoto && !dialog.open) {
+      dialog.showModal();
+    } else if (!selectedPhoto && dialog.open) {
+      dialog.close();
+    }
+  }, [selectedPhoto]);
+
+  return (
+    <>
+      <div className="gallery-grid">
+        {galleryPhotos.map((photo, index) => (
+          <button
+            className={`gallery-tile gallery-item gallery-item-${index % 4}`}
+            key={photo.src}
+            type="button"
+            aria-label={`View photo: ${photo.caption}`}
+            onClick={() => setSelectedPhoto(photo)}
+          >
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 800px) 100vw, 33vw"
+            />
+            <span className="gallery-item-overlay">
+              <span className="gallery-caption">{photo.caption}</span>
+              <span className="gallery-view">VIEW PHOTO <span aria-hidden="true">↗</span></span>
+            </span>
+          </button>
+        ))}
+      </div>
+      <dialog
+        className="gallery-lightbox"
+        ref={dialogRef}
+        aria-label={selectedPhoto?.caption ?? "Photo viewer"}
+        onClose={() => setSelectedPhoto(null)}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            event.preventDefault();
+            setSelectedPhoto(null);
+          }
+        }}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setSelectedPhoto(null);
+        }}
+      >
+        {selectedPhoto && (
+          <div className="lightbox-content">
+            <button
+              className="lightbox-close"
+              type="button"
+              aria-label="Close photo viewer"
+              onClick={() => setSelectedPhoto(null)}
+              autoFocus
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <img src={selectedPhoto.src} alt={selectedPhoto.alt} />
+            <p>{selectedPhoto.caption}</p>
+          </div>
+        )}
+      </dialog>
+    </>
   );
 }
 
@@ -311,12 +434,8 @@ function App() {
 
         <section className="section gallery-section" aria-labelledby="gallery-heading">
           <div className="page-shell">
-            <div className="gallery-heading"><div><span className="eyebrow">A LIFE IN ACTION</span><h2 id="gallery-heading">Sport. Service.<br /><em>Progress.</em></h2></div><p>Illustrative stock images are used here until authentic photographs are provided. They do not depict SK Hermanus, his teams or company projects.</p></div>
-            <div className="gallery-grid">
-              <figure className="gallery-tile gallery-rugby"><div role="img" aria-label="Stock photo representing rugby and sport" /><figcaption>Rugby & sport <span>Stock image</span></figcaption></figure>
-              <figure className="gallery-tile gallery-community"><div role="img" aria-label="Stock photo representing community activity" /><figcaption>Community <span>Stock image</span></figcaption></figure>
-              <figure className="gallery-tile gallery-work"><div role="img" aria-label="Stock photo representing project work" /><figcaption>Projects <span>Stock image</span></figcaption></figure>
-            </div>
+            <div className="gallery-heading"><div><span className="eyebrow">A LIFE IN ACTION</span><h2 id="gallery-heading">Sport. Service.<br /><em>Progress.</em></h2></div><p>A collection of your personal, community, education and sports moments. Select any photograph to view it larger.</p></div>
+            <PhotoGallery />
           </div>
         </section>
 
