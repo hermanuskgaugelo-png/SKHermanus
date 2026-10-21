@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: sk-hermanus
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
