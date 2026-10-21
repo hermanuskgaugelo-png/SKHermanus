@@ -72,4 +72,18 @@ npm run dev
 
 Profile and contact details are configured together near the top of `src/App.tsx`. The gallery and About section use the supplied personal, community and sports photographs stored in `public/images/`. Image loading is deferred for gallery cards. Phone lock-screen screenshots and a duplicate image were not included, to avoid showing status-bar details or repeating the same photo. The hero and business-workshop background images are illustrative stock photos, not photographs of SK Hermanus, his teams or completed company projects.
 
+Gallery photographs are described in the `galleryPhotos` list in `src/App.tsx`:
+
+| Image file | Gallery caption |
+| --- | --- |
+| `speaking-at-the-podium.jpg` | Speaking & community leadership |
+| `club-recognition.jpg` | Club recognition |
+| `graduation-portrait-01.jpg` | An education milestone |
+| `community-sports-field.jpg` | On the field; also used in the About section |
+| `personal-portrait.jpg` | A personal portrait |
+| `graduation-portrait-02.jpg` | Celebrating education |
+| `community-health-event.jpg` | Global Handwashing Day 2024 |
+| `journey-and-rugby-collage.jpg` | Moments from the journey |
+| `community-day-portrait.jpg` | A community moment |
+
 No WhatsApp link is shown because a preferred WhatsApp number has not been confirmed. No social accounts, testimonials, awards, completed qualifications or business projects have been invented.
