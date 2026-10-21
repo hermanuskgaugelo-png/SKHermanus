@@ -5,6 +5,7 @@ A responsive personal-brand website for Stephanus Kgaugelo Hermanus, built with 
 ## Project structure
 
 - `src/App.tsx` — homepage sections, profile content, navigation and email-based enquiry forms
+- `src/gallery.tsx` and `gallery.html` — standalone, responsive photo gallery page with a photo viewer
 - `src/styles.css` — responsive visual system and page styling
 - `src/privacy.tsx` and `privacy.html` — privacy information page
 - `public/favicon.svg` — SKH text monogram
@@ -61,6 +62,7 @@ These commands save and publish changes to GitHub; they do not deploy the site b
 5. Keep automatic deploys enabled. After connecting the repository, each push to the configured branch triggers a new build and deployment.
 
 The privacy page is available at `/privacy.html`. The included `render.yaml` lets you create a Render Blueprint with the same build and publish settings.
+The separate photo gallery is available at `/gallery.html` and is linked from the homepage navigation and footer.
 
 For the local development server, run:
 
@@ -70,20 +72,19 @@ npm run dev
 
 ## Content and images
 
-Profile and contact details are configured together near the top of `src/App.tsx`. The gallery and About section use the supplied personal, community and sports photographs stored in `public/images/`. Image loading is deferred for gallery cards. Phone lock-screen screenshots and a duplicate image were not included, to avoid showing status-bar details or repeating the same photo. The hero and business-workshop background images are illustrative stock photos, not photographs of SK Hermanus, his teams or completed company projects.
+Profile and contact details are configured together near the top of `src/App.tsx`. All 12 supplied photo files are stored with their original filenames and original image bytes in `public/images/`. Photos are not edited; thumbnails and the photo viewer display each entire image without cropping. Gallery image captions and alternative text are configured in `src/gallery.tsx`.
 
-Gallery photographs are described in the `galleryPhotos` list in `src/App.tsx`:
-
-| Image file | Gallery caption |
-| --- | --- |
-| `speaking-at-the-podium.jpg` | Speaking & community leadership |
-| `club-recognition.jpg` | Club recognition |
-| `graduation-portrait-01.jpg` | An education milestone |
-| `community-sports-field.jpg` | On the field; also used in the About section |
-| `personal-portrait.jpg` | A personal portrait |
-| `graduation-portrait-02.jpg` | Celebrating education |
-| `community-health-event.jpg` | Global Handwashing Day 2024 |
-| `journey-and-rugby-collage.jpg` | Moments from the journey |
-| `community-day-portrait.jpg` | A community moment |
+- `IMG_20241123_165304_121635.jpg`
+- `IMG_20241207_155925.jpg`
+- `Screenshot_20250106_181945_com_android_keyguard_.jpg`
+- `FB_IMG_1769711657021.jpg`
+- `IMG-20240811-WA0015_084513.jpg`
+- `FB_IMG_1673541653628.jpg`
+- `Screenshot_20250213_150033_com_android_keyguard_.jpg`
+- `FB_IMG_1769711579958.jpg`
+- `IMG_20241015_102628_122019.jpg`
+- `IMG-20240811-WA0016_084517.jpg`
+- `Collage_20250127_200215.jpg`
+- `20240618130348_IMG_8474_125800.JPG`
 
 No WhatsApp link is shown because a preferred WhatsApp number has not been confirmed. No social accounts, testimonials, awards, completed qualifications or business projects have been invented.
