@@ -61,7 +61,7 @@ These commands save and publish changes to GitHub; they do not deploy the site b
 4. Create the Static Site. Render builds and publishes the site and provides a public `onrender.com` URL.
 5. Keep automatic deploys enabled. After connecting the repository, each push to the configured branch triggers a new build and deployment.
 
-The separate photo gallery is available at `/gallery.html` and is linked from the homepage navigation and footer. It displays all 12 submitted image files unchanged, with their full photographs visible.
+The separate photo gallery is available at `/gallery.html` and is linked from the homepage navigation and footer. It displays all 66 submitted image files unchanged, with their full photographs visible. The Rugby & Sports section also features five rugby photographs.
 The privacy page is available at `/privacy.html`. The included `render.yaml` lets you create a Render Blueprint with the same build and publish settings.
 
 For the local development server, run:
@@ -72,7 +72,7 @@ npm run dev
 
 ## Content and images
 
-Profile and contact details are configured together near the top of `src/App.tsx`. All 12 supplied photo files are stored with their original filenames and original image bytes in `public/images/`. Photos are not edited; thumbnails and the photo viewer display each entire image without cropping. Gallery image captions and alternative text are configured in `src/gallery.tsx`.
+Profile and contact details are configured together near the top of `src/App.tsx`. All 66 supplied photo files are stored with their original filenames and original image bytes in `public/images/`. Photos are not edited; gallery thumbnails and the photo viewer display each entire image without cropping. Gallery image captions and alternative text are configured in `src/gallery.tsx`.
 
 - `IMG_20241123_165304_121635.jpg`
 - `IMG_20241207_155925.jpg`

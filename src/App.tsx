@@ -41,6 +41,34 @@ const experiences = [
   },
 ];
 
+const sportsPhotos = [
+  {
+    src: "/images/IMG20260509142922.jpg",
+    alt: "Rugby players gathered on the field.",
+    caption: "Club rugby on the field",
+  },
+  {
+    src: "/images/IMG20260509171535.jpg",
+    alt: "Rugby team together after a match.",
+    caption: "Teamwork after the match",
+  },
+  {
+    src: "/images/IMG20260613132617.jpg",
+    alt: "Young rugby players at a stadium.",
+    caption: "Young players at the stadium",
+  },
+  {
+    src: "/images/IMG20251118200311.jpg",
+    alt: "Rugby community members at a Blue Bulls award ceremony.",
+    caption: "Rugby recognition",
+  },
+  {
+    src: "/images/IMG20260814094251.jpg",
+    alt: "SK Hermanus with a Blue Bulls mascot.",
+    caption: "A Blue Bulls community event",
+  },
+];
+
 const milestones = [
   ["Community roots", "Youth volunteering and involvement in community, church and sports initiatives."],
   ["Rugby service", "Coaching, club administration and leadership with local rugby clubs."],
@@ -214,6 +242,14 @@ function App() {
                   <p>{item.detail}</p>
                   <span className="experience-note">{item.note}</span>
                 </article>
+              ))}
+            </div>
+            <div className="sports-photo-grid" aria-label="Rugby and sports photographs">
+              {sportsPhotos.map((photo) => (
+                <figure className="sports-photo" key={photo.src}>
+                  <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+                  <figcaption>{photo.caption}</figcaption>
+                </figure>
               ))}
             </div>
             <div className="academy-callout">
