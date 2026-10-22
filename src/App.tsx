@@ -181,7 +181,7 @@ function App() {
         <section className="section section-light" id="about">
           <div className="page-shell about-layout">
             <div className="about-visual">
-              <div className="about-photo" role="img" aria-label="Stock photograph of a rugby player carrying a ball" />
+              <div className="about-photo" role="img" aria-label="Portrait of SK Hermanus in graduation attire" />
               <div className="photo-caption"><span className="caption-dot" /> A commitment to people and progress</div>
               <div className="monogram-card" aria-label="SK Hermanus monogram">SK<span>H</span></div>
             </div>

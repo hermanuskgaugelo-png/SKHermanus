@@ -66,7 +66,7 @@ a { color: inherit; }
 .section-light { background: var(--grey); }
 .about-layout { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: clamp(55px, 8vw, 110px); }
 .about-visual { position: relative; min-height: 510px; }
-.about-photo { position: absolute; inset: 0 32px 34px 0; background: url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1100&q=80") center/cover; }
+.about-photo { position: absolute; inset: 0 32px 34px 0; background: url("/images/FB_IMG_1769711579958.jpg") center/cover; }
 .about-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(7,21,37,.45), transparent 55%); }
 .photo-caption { position: absolute; z-index: 1; bottom: 58px; left: 24px; color: white; font-size: 10px; letter-spacing: .05em; }
 .caption-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--gold); }
