@@ -143,12 +143,12 @@ h2 em { color: #a67c21; font-style: normal; }
 .service-row span:first-child { color: var(--gold); font-size: 9px; }
 .service-row strong { color: #e5e9ed; font-size: 11px; font-weight: 500; }
 .service-row span:last-child { color: var(--gold); }
-.business-image-wrap { position: relative; min-height: 500px; }
-.business-image { position: absolute; inset: 0 0 38px 25px; background: url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1100&q=80") center/cover; }
-.business-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(7,15,23,.4), transparent 65%); }
-.business-stamp { position: absolute; bottom: 60px; left: 0; width: 180px; height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; color: var(--navy); background: var(--gold); }
-.business-stamp span { font-size: 8px; font-weight: 700; letter-spacing: .15em; }
-.business-stamp strong { font-family: Manrope, sans-serif; font-size: 42px; letter-spacing: -.1em; }
+.business-image-wrap { display: grid; gap: 18px; }
+.business-image-wrap figure { margin: 0; background: #fff; }
+.business-branding-logo { display: grid; justify-items: center; padding: 18px; }
+.business-branding-logo img { display: block; width: min(100%, 300px); height: auto; }
+.business-branding-logo figcaption { margin-top: 10px; color: var(--navy); font-size: 10px; font-weight: 700; text-align: center; }
+.business-branding-profile img { display: block; width: 100%; height: auto; }
 .image-note { position: absolute; right: 0; bottom: 0; margin: 0; color: #aeb7c2; font-size: 9px; }
 .dark-form .enquiry-form { color: var(--white); background: #111b27; box-shadow: none; }
 .dark-form .form-heading h3 { color: var(--white); }
@@ -286,7 +286,7 @@ h2 em { color: #a67c21; font-style: normal; }
   .academy-symbol { width: 40px; height: 40px; }
   .academy-callout .text-link { grid-column: 2; }
   .partner-panel { max-width: 540px; }
-  .business-image-wrap { min-height: 430px; }
+  .business-image-wrap { max-width: 620px; width: 100%; margin: 0 auto; }
   .timeline-layout { grid-template-columns: 1fr; gap: 35px; }
   .timeline-intro { max-width: 490px; }
   .gallery-site-header { min-height: 70px; }
@@ -333,11 +333,8 @@ h2 em { color: #a67c21; font-style: normal; }
   .enquiry-form { padding: 26px 19px; }
   .form-grid { grid-template-columns: 1fr; gap: 14px; }
   .full-width { grid-column: auto; }
-  .business-image-wrap { min-height: 350px; }
-  .business-image { left: 18px; bottom: 32px; }
-  .business-stamp { bottom: 50px; width: 130px; height: 130px; }
-  .business-stamp strong { font-size: 33px; }
-  .business-stamp span { font-size: 6px; }
+  .business-image-wrap { gap: 12px; }
+  .business-branding-logo { padding: 12px; }
   .qualification-grid { grid-template-columns: 1fr; }
   .qualification-grid article, .qualification-grid article:nth-child(even) { min-height: 110px; padding: 22px 0; border-right: 0; }
   .timeline-list li { gap: 15px; }

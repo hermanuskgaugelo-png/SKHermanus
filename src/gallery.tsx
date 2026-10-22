@@ -88,7 +88,6 @@ const photos = [
     ["IMG_20251026_125924.jpg", "Graduation celebration"],
     ["IMG_20260123_154700.jpg", "Rugby team collage"],
     ["IMG_20260401_134603.jpg", "Rugby profile portrait"],
-    ["IMG_20260416_185234.jpg", "Radikwebo SKH Industries and Projects logo"],
     ["IMG_1762337907651.jpg", "Blue Bulls women's rugby social post"],
     ["IMG-20260825-WA0004.jpg", "Walking with a community elder"],
     ["IMG20250821143017.jpg", "At a Blue Bulls rugby event"],

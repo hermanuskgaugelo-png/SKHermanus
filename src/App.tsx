@@ -305,9 +305,13 @@ function App() {
               <a className="button button-gold" href="#business-enquiry">Discuss a business project <span aria-hidden="true">↗</span></a>
             </div>
             <div className="business-image-wrap">
-              <div className="business-image" role="img" aria-label="Stock photograph of workshop tools and fabrication work" />
-              <div className="business-stamp"><span>RADIKWEBO</span><strong>SKH</strong><span>INDUSTRIES & PROJECTS</span></div>
-              <p className="image-note">Illustrative stock photography — not a completed company project.</p>
+              <figure className="business-branding-logo">
+                <img src="/images/radikwebo-skh-logo.jpg" alt="Radikwebo SKH Industries and Projects logo" />
+                <figcaption>Radikwebo SKH Industries and Projects</figcaption>
+              </figure>
+              <figure className="business-branding-profile">
+                <img src="/images/radikwebo-skh-business-profile.jpg" alt="Radikwebo SKH Industries and Projects company profile and registration details" />
+              </figure>
             </div>
           </div>
           <div className="page-shell form-shell dark-form" id="business-enquiry">
