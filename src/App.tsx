@@ -6,7 +6,7 @@ const profile = {
   title: "Chairman “Natural Born Leader”",
   location: "Mamelodi, Tshwane, Gauteng, South Africa, 0122",
   personalEmail: "hermanuskgaugelo@gmail.com",
-  businessEmail: "tsammabp@mail.com",
+  businessEmail: "tsammabp@gmail.com",
   phones: ["076 158 7168", "060 600 4724"],
 };
 

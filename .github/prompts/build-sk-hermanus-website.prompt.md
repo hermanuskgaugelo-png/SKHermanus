@@ -17,7 +17,7 @@ Use a premium, accessible visual identity: navy `#071525`, black `#08090B`, gold
 
 - Location: Mamelodi, Tshwane, Gauteng, South Africa, 0122
 - Personal email: `hermanuskgaugelo@gmail.com`
-- Business email: `tsammabp@mail.com`
+- Business email: `tsammabp@gmail.com`
 - Telephone: `076 158 7168` and `060 600 4724`
 - Tagline: “Natural Born Leader — Building People, Developing Sport, Creating Opportunities.”
 
